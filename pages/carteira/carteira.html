@@ -99,7 +99,7 @@
                     <td>-R$52,02</td>
                     <td>Dividendos</td>
                     <td class="td-botoes">
-                        <button class="btn-acao vender" title="Vender ativo"></button>
+                        <label for="modalVenderToggle" class="btn-acao vender"></label>
                         <button class="btn-acao editar" title="Editar ativo"></button>
                         <button class="btn-acao excluir" title="Excluir ativo"></button>
                     </td>
@@ -117,7 +117,7 @@
                     <td>R$127,36</td>
                     <td>Ano do Halving</td>
                     <td class="td-botoes">
-                        <button class="btn-acao vender" title="Vender ativo"></button>
+                        <label for="modalVenderToggle" class="btn-acao vender"></label>
                         <button class="btn-acao editar" title="Editar ativo"></button>
                         <button class="btn-acao excluir" title="Excluir ativo"></button>
                     </td>
@@ -135,13 +135,33 @@
                     <td>R$990,00</td>
                     <td>Oportunidade de preço</td>
                     <td class="td-botoes">
-                        <button class="btn-acao vender" title="Vender ativo"></button>
+                        <label for="modalVenderToggle" class="btn-acao vender"></label>
                         <button class="btn-acao editar" title="Editar ativo"></button>
                         <button class="btn-acao excluir" title="Excluir ativo"></button>
                     </td>
                 </tr>
             </tbody>
         </table>
+
+        <input type="checkbox" id="modalVenderToggle" class="modal-toggle" hidden>
+        <div class="modal">
+            <div class="modal-content">
+                <label for="modalVenderToggle" class="close-button">&times;</label>
+                <h2>Vender Ativo</h2>
+                <form id="formVenderAtivo">
+                     <label for="quantidadeVenda">Quantidade a Vender:</label>
+                    <input type="number" id="quantidadeVenda" required>
+
+                    <label for="precoVenda">Preço de Venda (R$):</label>
+                    <input type="number" id="precoVenda" step="0.01" required>
+
+                    <label for="dataVenda">Data da Venda:</label>
+                    <input type="date" id="dataVenda" required>
+
+                    <button type="submit" id="venderAtivo">Confirmar Venda</button>
+                </form>
+            </div>
+        </div>
 
     </main>
 
