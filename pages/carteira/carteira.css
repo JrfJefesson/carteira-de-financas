@@ -66,7 +66,7 @@ main {
     padding: 2rem;
 }
 
-#cadAtivos, #historicoTransacoes {
+.open-modal, #historicoTransacoes {
     padding: 0.7rem 1.5rem;
     background-color: white;
     border: 1px solid black;
@@ -76,11 +76,12 @@ main {
     transition: background-color 0.3s ease;
 }
 
-#cadAtivos:hover, #historicoTransacoes:hover {
+.open-modal:hover, #historicoTransacoes:hover {
     color: greenyellow;
     transform: scale(1.01);
     border: 2px solid greenyellow;
 }
+
 
 h2 {
     margin-bottom: 1rem;
@@ -160,4 +161,80 @@ tbody tr:hover {
 
 .excluir::before {
     content: '❌';
+}
+
+
+
+.modal-toggle {
+    display: none; /* Esconde o checkbox */
+}
+
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fica em cima da página */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Adiciona rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-toggle:checked + .modal {
+    display: block; /* Mostra o modal quando o checkbox é marcado */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Margem superior e centraliza */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima */
+    border-radius: 8px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#cadastrarAtivo {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #28a745;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cadastrarAtivo:hover {
+    background-color: #218838;
 }
