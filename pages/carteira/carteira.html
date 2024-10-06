@@ -1,38 +1,115 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/normalize.css">
-        <link rel="stylesheet" href="carteira.css">
-        <title>Carteira de Investimentos | Carteira</title>
-    </head>
-    <body>
-        <aside class="sidebar">
-            <section>
-                <h1 id="app-name">Carteira de Investimentos</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="carteira.css">
+    <title>Carteira de Investimentos | Carteira</title>
+</head>
+<body>
+    <aside class="sidebar">
+        <section>
+            <h1 id="app-name">Carteira de Investimentos</h1>
 
-                <nav class="sidebar-navigation">
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Carteira</a></li>
-                        <li><a href="">Gráficos</a></li>
-                        <li><a href="">Dicas de Investimentos</a></li>
-                    </ul>
-                </nav>
-            </section>
-            
-            <footer class="login">
-                <a href="/pages/login/login.html">Login/Register</a>
-            </footer>
-        </aside>
+            <nav class="sidebar-navigation">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Carteira</a></li>
+                    <li><a href="">Gráficos</a></li>
+                    <li><a href="">Dicas de Investimentos</a></li>
+                </ul>
+            </nav>
+        </section>
         
-        <main>
-            <main>
-                <button type="button" id = 'cadAtivos'>Cadastrar Ativos</button>
-                <button type="button" id = 'historicoTransacoes'>Histórico de Transações</button>
-            </main>
-            
-        </main>
-    </body>
-    </html>
+        <footer class="login">
+            <a href="/pages/login/login.html">Login/Register</a>
+        </footer>
+    </aside>
+    
+    <main>
+        <button type="button" id = 'cadAtivos'>Cadastrar Ativos</button>
+        <button type="button" id = 'historicoTransacoes'>Histórico de Transações</button>
+
+        <br><br>
+        <h3>Ativos</h3>
+        <br>
+        <table id="tabelaAtivos">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo de Ativo</th>
+                    <th>Quantidade comprada</th>
+                    <th>Valor do ativo (R$)</th>
+                    <th>Valor total pago (R$)</th>
+                    <th>Data da compra</th>
+                    <th>Valor atual (R$)</th>
+                    <th>Valor atual total</th>
+                    <th>Lucro (%)</th>
+                    <th>Lucro (R$)</th>
+                    <th>Anotações</th>
+                    <th>Operações</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BBAS3</td>
+                    <td>Ações</td>
+                    <td>100</td>
+                    <td>R$27,38</td>
+                    <td>R$2738,00</td>
+                    <td>01/01/2024</td>
+                    <td>R$26,86</td>
+                    <td>R$2686,00</td>
+                    <td>-1,9%</td>
+                    <td>-R$52,02</td>
+                    <td>Dividendos</td>
+                    <td class="td-botoes">
+                        <button class="btn-acao vender" title="Vender ativo"></button>
+                        <button class="btn-acao editar" title="Editar ativo"></button>
+                        <button class="btn-acao excluir" title="Excluir ativo"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BTC</td>
+                    <td>Criptoativo</td>
+                    <td>0.001</td>
+                    <td>R$214497,28</td>
+                    <td>R$214,5</td>
+                    <td>01/01/2024</td>
+                    <td>R$341860,08</td>
+                    <td>R$341,86</td>
+                    <td>59,38%</td>
+                    <td>R$127,36</td>
+                    <td>Ano do Halving</td>
+                    <td class="td-botoes">
+                        <button class="btn-acao vender" title="Vender ativo"></button>
+                        <button class="btn-acao editar" title="Editar ativo"></button>
+                        <button class="btn-acao excluir" title="Excluir ativo"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MXRF11</td>
+                    <td>FII</td>
+                    <td>100</td>
+                    <td>R$10,49</td>
+                    <td>R$1049,00</td>
+                    <td>01/01/2024</td>
+                    <td>R$9,90</td>
+                    <td>-R$59,00</td>
+                    <td>-5,62%</td>
+                    <td>R$990,00</td>
+                    <td>Oportunidade de preço</td>
+                    <td class="td-botoes">
+                        <button class="btn-acao vender" title="Vender ativo"></button>
+                        <button class="btn-acao editar" title="Editar ativo"></button>
+                        <button class="btn-acao excluir" title="Excluir ativo"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+</body>
+</html>
